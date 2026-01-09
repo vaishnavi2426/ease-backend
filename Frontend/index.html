@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EASE | AI-Powered E-Commerce Support</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">EASE<span>.</span></div>
+
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#">Solutions</a></li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+
+            <div class="nav-auth">
+                <button class="btn-text" id="loginBtn">Log In</button>
+                <button class="btn-primary" id="registerBtn">Register</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>EASE: AI for <br><span>E-Commerce</span></h1>
+                <p>Automate Support & Simplify Returns with AI.</p>
+
+                <div class="hero-btns">
+                    <button class="btn-primary">Get Started Free</button>
+                    <button class="btn-secondary">View Demo</button>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="ai-sphere">
+                    <i data-lucide="bot" class="hero-bot-icon"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FEATURES ================= -->
+        <section id="features" class="features">
+            <div class="feature-card">
+                <div class="icon-box"><i data-lucide="message-circle"></i></div>
+                <h3>Instant Support</h3>
+                <p>Resolve customer queries instantly.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon-box"><i data-lucide="refresh-cw"></i></div>
+                <h3>Smart Returns</h3>
+                <p>Automated return & refund handling.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon-box"><i data-lucide="zap"></i></div>
+                <h3>Agent Hand-off</h3>
+                <p>Escalate to humans when required.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= AUTH MODAL ================= -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <h2>Create Account</h2>
+            <p>Register to continue</p>
+
+            <form id="authForm">
+
+                <!-- Username -->
+                <div class="form-group">
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+
+                <!-- SEND OTP -->
+                <div class="form-group">
+                    <button type="button" id="sendOtpBtn" class="btn-secondary" style="width:100%;">
+                        Send OTP
+                    </button>
+                </div>
+
+                <!-- OTP + VERIFY -->
+                <div class="form-group otp-section">
+                    <input type="text" id="otp" placeholder="Enter OTP" maxlength="6" disabled>
+                    <button type="button" id="verifyOtpBtn" disabled>
+                        Verify OTP
+                    </button>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="form-group">
+                    <input type="tel" id="phone" placeholder="Phone Number" required>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+
+                <!-- Pincode -->
+                <div class="form-group">
+                    <input type="text" id="pincode" placeholder="Pincode" maxlength="6" required>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" id="registerSubmitBtn" class="btn-primary" style="width:100%; margin-top:15px;"
+                    disabled>
+                    Register
+                </button>
+
+            </form>
+        </div>
+    </div>
+    <!-- ================= LOGIN MODAL ================= -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+
+            <h2>Login</h2>
+            <p>Access your account</p>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="email" id="loginEmail" placeholder="Email" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    Login
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- ================= SCRIPT ================= -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
