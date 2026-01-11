@@ -17,12 +17,12 @@ CORS(app)
 load_dotenv()  # reads .env from same folder
 
 SENDER_EMAIL = os.getenv("EMAIL_USER")
-SENDER_PASSWORD = os.getenv("EMAIL_PASSWORD")
+SENDER_PASSWORD = os.getenv("EMAIL_APP_PASSWORD")
 
 # ================= DATABASE =====================
-conn = psycopg2.connect(
-    host="localhost", database="ease_db", user="postgres", password="pgadmin"
-)
+DATABASE_URL = os.getenv("DATABASE_URL")
+conn = psycopg2.connect(DATABASE_URL)
+
 
 
 # ================= EMAIL FUNCTION ===============
